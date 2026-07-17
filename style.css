@@ -427,6 +427,29 @@ h1, h2, h3, .cutout-title, .badge, .top-nav a {
     .huge .letter { font-size: 3rem; }
 }
 
+/* Gallery Section */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.gallery-grid .polaroid {
+    width: 220px;
+}
+
+.gallery-grid .polaroid:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.gallery-grid .polaroid:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+/* About Me Section */
 /* Top Navigation */
 .top-nav {
     position: fixed;
