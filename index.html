@@ -11,6 +11,14 @@
     <meta name="description" content="Custom, reusable press-on nails made to match your unique style by Rylie.">
 </head>
 <body>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#slide-1">Home</a></li>
+            <li><a href="#slide-2">About</a></li>
+            <li><a href="#slide-4">Order</a></li>
+            <li><a href="#slide-5">Included</a></li>
+        </ul>
+    </nav>
     <div class="carousel-container">
         <!-- Hero Section -->
         <section class="slide hero" id="slide-1">
@@ -93,18 +101,38 @@
             <div class="details-content">
                 <div class="details-left">
                     <div class="grid-paper">
-                        <h2>Order by DMing me details such as:</h2>
+                        <h2>Order Specifications:</h2>
                         <ul class="star-list">
-                            <li><img src="https://cdn-icons-png.flaticon.com/512/4117/4117283.png" alt="Star" class="list-icon">Inspo pics</li>
-                            <li><img src="https://cdn-icons-png.flaticon.com/512/4117/4117283.png" alt="Star" class="list-icon">Info on nail shape & length</li>
-                            <li><img src="https://cdn-icons-png.flaticon.com/512/4117/4117283.png" alt="Star" class="list-icon">Sizing details <span class="arrow">⤵</span></li>
+                            <li><img src="https://cdn-icons-png.flaticon.com/512/3757/3757041.png" alt="Flower" class="list-icon">Inspo pics</li>
+                            <li><img src="https://cdn-icons-png.flaticon.com/512/3757/3757041.png" alt="Flower" class="list-icon">Info on nail shape & length</li>
+                            <li><img src="https://cdn-icons-png.flaticon.com/512/3757/3757041.png" alt="Flower" class="list-icon">Sizing details <span class="arrow">⤵</span></li>
                         </ul>
+                        
+                        <form action="mailto:placeholder@example.com" method="POST" enctype="text/plain" class="order-form">
+                            <div class="input-group">
+                                <label>Name:</label>
+                                <input type="text" name="Name" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Nail Shape & Length:</label>
+                                <input type="text" name="ShapeLength" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Sizing Details:</label>
+                                <textarea name="Sizing" rows="2" required></textarea>
+                            </div>
+                            <div class="input-group">
+                                <label>Link to Inspo Pics:</label>
+                                <input type="url" name="InspoLink">
+                            </div>
+                            <button type="submit" class="submit-btn">Submit Order via Email</button>
+                        </form>
+                        
                         <p class="warning">Please order at least 1 week in advance!</p>
                     </div>
                     
                     <div class="pricing-card">
                         <p>Pricing will vary depending on design, add-ons, etc</p>
-                        <strong>Send me a DM for a quote!</strong>
                     </div>
                 </div>
                 
