@@ -39,13 +39,12 @@ h1, h2, h3, .cutout-title, .badge {
 
 .slide {
     width: 100%;
-    min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 2rem;
+    padding: 120px 2rem;
 }
 
 /* Common Elements */
@@ -154,6 +153,8 @@ h1, h2, h3, .cutout-title, .badge {
 
 .about-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     max-width: 900px;
     align-items: center;
@@ -227,6 +228,8 @@ h1, h2, h3, .cutout-title, .badge {
 /* Slide 4: Order Details */
 .details-content {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 3rem;
     max-width: 1000px;
     z-index: 2;
