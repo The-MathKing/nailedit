@@ -337,11 +337,9 @@ h1, h2, h3, .cutout-title, .badge, .top-nav a {
     background: #fff;
     padding: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* Stamp border effect */
-    mask-image: radial-gradient(#fff 4px, transparent 4px);
-    mask-size: 15px 15px;
-    mask-position: -5px -5px;
-    border: 2px dashed #eee;
+    /* Stamp border effect without destroying the image */
+    border: 2px dashed #ffb6c1;
+    border-radius: 5px;
 }
 .stamp img {
     width: 200px;
