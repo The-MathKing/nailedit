@@ -38,13 +38,33 @@ h1, h2, h3, .cutout-title, .badge {
 }
 
 .slide {
-    width: 100%;
+    width: calc(100% - 4rem);
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 40px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 120px 2rem;
+    padding: 80px 2rem;
+    transition: transform 0.3s ease;
+}
+
+.slide:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    backdrop-filter: blur(10px);
+}
+
+.slide:nth-child(even) {
+    background: rgba(255, 221, 225, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    backdrop-filter: blur(10px);
+}
+
+.slide:hover {
+    transform: translateY(-5px);
 }
 
 /* Common Elements */
