@@ -48,4 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
             targetSlide.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+    // 3D Mouse Parallax Effect
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 20; // max 10 deg
+        const y = (e.clientY / window.innerHeight - 0.5) * 20;
+        
+        const parallaxEls = document.querySelectorAll('.parallax-el');
+        parallaxEls.forEach(el => {
+            // Apply slight tilt opposite to mouse position
+            el.style.transform = `perspective(1000px) rotateX(${-y}deg) rotateY(${x}deg)`;
+        });
+    });
 });
