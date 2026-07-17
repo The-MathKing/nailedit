@@ -12,14 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentSlide = index + 1;
             }
         });
+        
+        dots.forEach(dot => dot.classList.remove('active'));
+        const activeDot = document.querySelector(`.dot[data-target="${currentSlide}"]`);
+        if (activeDot) {
+            activeDot.classList.add('active');
+        }
+    });
 
-        dots.forEach(dot => {
-            dot.classList.remove('active');
-            if (parseInt(dot.getAttribute('data-target')) === currentSlide) {
-                dot.classList.add('active');
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: unobserve after animating once
+                // observer.unobserve(entry.target);
             }
         });
-    });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => observer.observe(el));
 
     // Scroll to slide on dot click
     dots.forEach(dot => {
