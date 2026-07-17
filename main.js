@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots = document.querySelectorAll('.dot');
 
     // Update active dot on scroll
-    container.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
         let currentSlide = 1;
         slides.forEach((slide, index) => {
             const slideTop = slide.offsetTop;
-            if (container.scrollTop >= slideTop - container.clientHeight / 2) {
+            if (window.scrollY >= slideTop - window.innerHeight / 2) {
                 currentSlide = index + 1;
             }
         });
